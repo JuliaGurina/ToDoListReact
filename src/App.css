@@ -1,0 +1,166 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: #00aecc;
+  padding: 0;
+  margin: 0;
+  height: 100%
+}
+
+.block {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  font-family: "Fredoka One", cursive;
+  color: #fff;
+  -webkit-text-stroke: 3px black;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.add-tasks {
+  font-size: 2rem;
+}
+
+.btn {
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  margin-left: 10px;
+  background: #fff;
+  border: 0.15rem solid;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background: #00aecc;
+}
+
+.content-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  height: 70vh;
+  padding-right: 10px;
+}
+
+.task-container {
+  width: 55vw;
+  display: flex;
+  align-items: center;
+  background: #b5e6f0;
+  border: 0.2rem solid;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.text-task {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000;
+  width: 45vw;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+.taskCheck {
+  width: 3vw;
+  height: 3vh;
+}
+
+.done-text {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through;
+  width: 48vw;
+}
+
+.edit-text {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 2rem;
+  resize: none;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 48vw;
+}
+
+.App-img {
+  width: 3vw;
+  height: 3vh;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .task-container {
+    width: 66vw;
+  }
+
+  .text-task {
+    width: 52vw;
+  }
+
+  .edit-text {
+    width: 52vw;
+    margin-right: 20px;
+  }
+
+  .done-text {
+    width: 55vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 55px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .task-container {
+    width: 88vw;
+  }
+
+  .btn {
+    width: 25vw;
+    height: 11vh;
+    margin-top: 10px;
+  }
+
+  .text-task {
+    width: 65vw;
+  }
+
+  .edit-text {
+    width: 60vw;
+  }
+
+  .App-img {
+    width: 7vw;
+    height: 7vh;
+  }
+
+  .add-tasks {
+    font-size: 3rem;
+    width: 88vw;
+  }
+
+ .taskCheck { 
+  width: 7vw;
+  height: 7vh;
+ }
+}
+
+
