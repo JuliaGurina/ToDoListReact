@@ -33,7 +33,7 @@ function App() {
   };
 
   const updateValueInput = (event) => {
-    if (event.key === "Enter" ) {
+    if (event.key === "Enter") {
       addNewTask();
     }
   };
@@ -81,28 +81,28 @@ function App() {
     setIndex(index);
   };
 
+  tasks.sort((a, b) => a.isCheck - b.isCheck);
+
   return (
     <div className="container">
       <header className="block">
         <h1>To-Do List</h1>
-        <input 
-        onKeyDown={(event) => updateValueInput(event)}
-        className="add-tasks"
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+        <input
+          onKeyDown={(event) => updateValueInput(event)}
+          className="add-tasks"
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
         />
         <button className="btn" onClick={() => addNewTask()}>+</button>
       </header>
       <div className="content-page">
+
         {tasks.map((task, index) => {
-          tasks.sort((task1, task2) =>
-          task1.isCheck > task2.isCheck ? 1 : task1.isCheck < task2.isCheck ? -1 : 0
-        );
 
           return indexEdit === index ? (
             <div key={`task-${index}`}>
-              <input 
+              <input
                 className="edit-text"
                 type="text"
                 onChange={(e) => setEdit(e.target.value)}
@@ -129,13 +129,7 @@ function App() {
                 onChange={() => onChangeCheckbox(index)}
               />
               <span className={task.isCheck ? "text-task done-text" : "text-task"}>{task.text}</span>
-              {!task.isCheck &&  
-              <img
-                src={edit}
-                onClick={() => editTask(index)}
-                className={"App-img"}
-                alt="edit"
-              />}
+              {!task.isCheck && <img src={edit} onClick={() => editTask(index)} className={"App-img"} alt="edit" />}
               <img
                 src={del}
                 onClick={() => deleteTask(index)}
